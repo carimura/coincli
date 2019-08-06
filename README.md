@@ -4,18 +4,10 @@ This is a simple CLI tool that gets cryptocurrency prices from
 CoinMarketCap. It's written in Java and compiled ahead-of-time into 
 an executable (as CLI's should be) using GraalVM's native-image stuff.
 
-You probably don't want to use this to become a day trader. 
+You probably don't want to use this to perform technical analysis. 
 Or at all really. But here it is.
 
-# Pre-Requisites
-
-- [GraalVM CE 19](https://github.com/oracle/graal/releases)
-- Native Image: `gu install native-image` (see [here](https://www.graalvm.org/docs/reference-manual/aot-compilation/))
-
-# Building
-
-1. `mvn clean build`
-2. `native-image -jar target/coincli-0.1-jar-with-dependencies.jar coincli`
+![map to riches](https://imgs.xkcd.com/comics/technical_analysis_2x.png)
 
 # Using
 
@@ -34,11 +26,25 @@ usage: coincli
                    [default: false]
 ```
 
+# Building
+
+## Pre-Requisites
+
+- [GraalVM CE 19](https://github.com/oracle/graal/releases)
+- Native Image: `gu install native-image` (see [here](https://www.graalvm.org/docs/reference-manual/aot-compilation/))
+
+## And then...
+
+1. `mvn clean build`
+2. `native-image -jar target/coincli-0.1-jar-with-dependencies.jar coincli`
+
+
 # Making Lots of Money*
 
-Be a trader. Here's the map.
+Step 1. Use CoinCLI
 
-![map to riches](https://imgs.xkcd.com/comics/technical_analysis_2x.png)
+Step 2. ???
 
+Step 3. Riches. 
 
 \* this is not investment or legal advice.
