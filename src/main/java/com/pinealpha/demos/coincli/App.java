@@ -30,10 +30,10 @@ public class App {
         System.exit(-1);
       }
 
-      var limit = cli.hasOption("n") ? (String) cli.getOptionValue("n") : "1000";
+      String limit = cli.hasOption("n") ? (String) cli.getOptionValue("n") : "1000";
       System.out.println("limit: " + limit);
 
-      var coin = cli.hasOption("coin") ? cli.getOptionValue("coin").toUpperCase() : "";
+      String coin = cli.hasOption("coin") ? cli.getOptionValue("coin").toUpperCase() : "";
       System.out.println("coin: " + coin);
 
       List<JSONObject> allCurrencies = CMC.getCoinList("1", limit);
