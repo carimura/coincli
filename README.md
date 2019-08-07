@@ -37,7 +37,14 @@ usage: coincli
 ## Building
 
 1. `mvn clean build`
-2. `native-image -jar target/coincli-0.1-jar-with-dependencies.jar coincli`
+2. `native-image -jar target/coincli-0.1-jar-with-dependencies.jar bin/coincli`
+
+## TODO
+
+- include everything inside the executable for portability (i guess this ins't the default?)
+- when supplying both a `--num` and `--up/down`, should return the number not the filtered number (or rename to max num to eliminate confusion)
+- specific coin should hit a different API to get just that coin.
+- ability to specify time range (not just 7 days hardcoded)
 
 # Making Lots of Money*
 

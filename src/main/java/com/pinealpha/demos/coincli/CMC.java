@@ -55,15 +55,19 @@ public class CMC {
   public static void printList(List<JSONObject> list) {
     Iterator it = list.iterator();
     JSONObject c = new JSONObject();
-    System.out.printf("Found %s currencies that match: \n", list.size());
+    System.out.printf("Found %s currencies that match: \n\n", list.size());
+
+    System.out.println("\nCOIN\t CURRENT PRICE \t 7-DAY CHANGE\n");
     while (it.hasNext()) {
       c = (JSONObject)it.next();
       String name = c.getString("symbol");
+      Float price = c.getJSONObject("quote")
+          .getJSONObject("USD")
+          .getFloat("price");
       Float percentChange7d = c.getJSONObject("quote")
           .getJSONObject("USD")
           .getFloat("percent_change_7d");
-      String movement = percentChange7d > 0 ? "UP" : "DOWN";
-      System.out.printf("%s is %s by %.2f%%\n", name, movement, percentChange7d);
+      System.out.printf("%s\t $%7.2f \t %6.2f%% \n", name, price, percentChange7d);
     }
   }
 }
