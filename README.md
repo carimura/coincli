@@ -8,7 +8,7 @@ You probably don't want to use this to perform technical analysis. Or at all.
 It's pretty dumb in its current state and probably always will be. 
 But if you want to contribute, keep reading.
 
-![map to riches](https://imgs.xkcd.com/comics/technical_analysis_2x.png)
+[![map to riches](https://imgs.xkcd.com/comics/technical_analysis_2x.png)](https://xkcd.com/2101/)
 
 # Using
 
