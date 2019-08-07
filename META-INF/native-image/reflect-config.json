@@ -1,0 +1,14 @@
+[
+  {
+    "name":"java.lang.Throwable",
+    "methods":[{"name":"addSuppressed","parameterTypes":["java.lang.Throwable"] }]
+  },
+  {
+    "name":"org.json.JSONObject",
+    "methods":[
+      {"name":"getAnnotationDepth","parameterTypes":[""] },
+      {"name":"getAnnotation","parameterTypes":[""] },
+      {"name":"populateMap","parameterTypes":[""] }
+    ]
+  }
+]

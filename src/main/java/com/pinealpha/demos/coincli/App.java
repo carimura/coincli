@@ -1,8 +1,8 @@
 package com.pinealpha.demos.coincli;
 
 import org.apache.commons.cli.*;
-import org.json.JSONObject;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
@@ -11,6 +11,11 @@ import java.util.stream.Collectors;
 public class App {
 
   public static void main(String[] args) throws Exception {
+
+    if (System.getenv("CMC_KEY") == null) {
+      System.err.println("Invalid or missing CoinMarketCap API key. Set environment variable CMC_KEY to your API key.");
+      System.exit(1);
+    }
 
     Options options = new Options();
     options.addOption("h", "help", false, "see all coincli help page");
@@ -36,32 +41,30 @@ public class App {
       String coin = cli.hasOption("coin") ? cli.getOptionValue("coin").toUpperCase() : "";
       System.out.println("coin: " + coin);
 
-      List<JSONObject> allCurrencies = CMC.getCoinList("1", limit);
+      Coin[] coins = CMC.getCoinList("1", limit);
+
+      List<Coin> currencies = Arrays.asList(coins);
 
       Predicate<String> p = (s) -> s.startsWith(coin);
 
-      List<JSONObject> filteredCurrencies = allCurrencies
-          .stream()
-          .filter(a -> p.test(a.getString("symbol")))
-          .collect(Collectors.toList());
-
       if (cli.hasOption("up")) {
-        filteredCurrencies = filteredCurrencies
+        currencies = currencies
             .stream()
-            .filter(a -> a.getJSONObject("quote").getJSONObject("USD").getFloat("percent_change_7d") > 0)
-            .sorted(Comparator.comparing(a -> a.getJSONObject("quote").getJSONObject("USD").getFloat("percent_change_7d")))
+            .filter(a -> a.quote.get("USD").percent_change_7d > 0)
+            .sorted(Comparator.comparing(a -> a.quote.get("USD").percent_change_7d))
             .collect(Collectors.toList());
       }
 
       if (cli.hasOption("down")) {
-        filteredCurrencies = filteredCurrencies
+        currencies = currencies
             .stream()
-            .filter(a -> a.getJSONObject("quote").getJSONObject("USD").getFloat("percent_change_7d") < 0)
-            .sorted(Comparator.comparing(a -> a.getJSONObject("quote").getJSONObject("USD").getFloat("percent_change_7d")))
+            .filter(a -> a.quote.get("USD").percent_change_7d < 0)
+            .sorted(Comparator.comparing(a -> a.quote.get("USD").percent_change_7d))
             .collect(Collectors.toList());
       }
 
-      CMC.printList(filteredCurrencies);
+      CMC.printList(currencies);
+
     } catch (UnrecognizedOptionException e) {
       System.err.println(e.getMessage());
     }

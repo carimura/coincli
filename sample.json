@@ -1,0 +1,72 @@
+{
+  "status": {
+    "timestamp": "2019-08-07T15:09:25.946Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 8,
+    "credit_count": 1
+  },
+
+  "data": [
+    {
+      "id": 1,
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "slug": "bitcoin",
+      "num_market_pairs": 7789,
+      "date_added": "2013-04-28T00:00:00.000Z",
+      "tags": [
+        "mineable"
+      ],
+      "max_supply": 21000000,
+      "circulating_supply": 17863287,
+      "total_supply": 17863287,
+      "platform": null,
+      "cmc_rank": 1,
+      "last_updated": "2019-08-07T15:08:32.000Z",
+      "quote": {
+        "USD": {
+          "price": 11833.9865486,
+          "volume_24h": 21375016093.1853,
+          "percent_change_1h": -1.39892,
+          "percent_change_24h": 0.847583,
+          "percent_change_7d": 19.227,
+          "market_cap": 211393898071.78125,
+          "last_updated": "2019-08-07T15:08:32.000Z"
+        }
+      }
+    },
+
+    {
+      "id": 1027,
+      "name": "Ethereum",
+      "symbol": "ETH",
+      "slug": "ethereum",
+      "num_market_pairs": 5526,
+      "date_added": "2015-08-07T00:00:00.000Z",
+      "tags": [
+        "mineable"
+      ],
+      "max_supply": null,
+      "circulating_supply": 107223068.249,
+      "total_supply": 107223068.249,
+      "platform": null,
+      "cmc_rank": 2,
+      "last_updated": "2019-08-07T15:08:22.000Z",
+      "quote": {
+        "USD": {
+          "price": 226.764672849,
+          "volume_24h": 6736392091.54519,
+          "percent_change_1h": -0.714983,
+          "percent_change_24h": -1.1497,
+          "percent_change_7d": 5.22188,
+          "market_cap": 24314403993.350483,
+          "last_updated": "2019-08-07T15:08:22.000Z"
+        }
+      }
+    }
+  ]
+
+
+
+}

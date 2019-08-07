@@ -38,6 +38,7 @@ usage: coincli
 ## Building
 
 1. `mvn clean build`
+2. https://medium.com/graalvm/introducing-the-tracing-agent-simplifying-graalvm-native-image-configuration-c3b56c486271
 2. `native-image -jar target/coincli-0.1-jar-with-dependencies.jar coincli`
 
 ## TODO
