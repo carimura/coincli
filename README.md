@@ -13,6 +13,7 @@ But if you want to contribute, keep reading.
 
 # Using
 
+- set environement variable CMC_KEY to a proper API key from [CoinMarketCap](https://coinmarketcap.com/api/)
 - Just type ./coincli for the man page
 
 ```
