@@ -1,14 +1,33 @@
 [
-  {
-    "name":"java.lang.Throwable",
-    "methods":[{"name":"addSuppressed","parameterTypes":["java.lang.Throwable"] }]
-  },
-  {
-    "name":"org.json.JSONObject",
-    "methods":[
-      {"name":"getAnnotationDepth","parameterTypes":[""] },
-      {"name":"getAnnotation","parameterTypes":[""] },
-      {"name":"populateMap","parameterTypes":[""] }
-    ]
-  }
+{
+  "name":"com.fasterxml.jackson.databind.ext.Java7SupportImpl",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.pinealpha.demos.coincli.Coin",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true,
+  "allDeclaredConstructors":true
+},
+{
+  "name":"com.pinealpha.demos.coincli.Quote",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true,
+  "allDeclaredConstructors":true
+},
+{
+  "name":"com.pinealpha.demos.coincli.Result",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true,
+  "allDeclaredConstructors":true
+},
+{
+  "name":"java.lang.Throwable",
+  "methods":[{"name":"addSuppressed","parameterTypes":["java.lang.Throwable"] }]
+},
+{
+  "name":"java.util.LinkedHashMap",
+  "allDeclaredMethods":true,
+  "allDeclaredConstructors":true
+}
 ]
