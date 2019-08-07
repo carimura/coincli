@@ -38,7 +38,7 @@ usage: coincli
 ## Building
 
 1. `mvn clean build`
-2. `native-image -jar target/coincli-0.1-jar-with-dependencies.jar bin/coincli`
+2. `native-image -jar target/coincli-0.1-jar-with-dependencies.jar coincli`
 
 ## TODO
 
